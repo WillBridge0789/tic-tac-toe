@@ -1,22 +1,3 @@
-## Questions
- * How do we only allow one button click per tile? 
- * HTML/CSS
- * Conditional rendering
- * Is it an X in the square or a O
- * Who wins? X or O or also if the Cat
-
-## Atoms
- * Tiles
- * Using bootstrap on a div to make it .col-4
-
- * Div.container
-	* Div.row
-		* div.col-4
-
-## Organism
- * Tiles - click events
- * Board as whole
- * Buttons (restart)
 # Tic-Tac-Toe
 
 ## Objectives
@@ -52,23 +33,18 @@
 ## Functions
 - init()
 - checkWin()
-- switchPlayer()
-    * If currentPlayer == ‘X’
-        - currentPlayer = ‘O’
-    * Else
-        - currentPlayer = ‘X’
+    - checks state winConditions to see if either players 3 spots matched one of the indecises in the winConditions array. 
+    * **IF** playerX **OR** playerO === state.winConditions
+        * show winning player
+    * **ELSE** 
+        * show 'Cat Game!'
+- playerXO()
+    - Switches the symbols from X to O after every 1 click.
+    - **let** Symbols = 'X' and 'O'
+    - Start with 'X'. After tile is clicked,
+        - switch symbol to 'O' 
 - makeMove()
     * Adds the current player to the tile clicked
-- checkWin()
-    * If win do endGame()
-    * else
-        * Switches the currentPlayer in state
-    - Removes the eventListener
-- endGame()
-    * Display the winner of the game
-    - Remove all event listeners
-    * Show reset game button
-
 - resetGame()
     * Drawboard
     - Resets state to initial values
@@ -78,32 +54,4 @@
 	* Draw the board
 	* For each tile drawn, add a click listener to it
 
-
 ## START
-- At init, the board should be displayed.
-    - 9 tiles: numbered 0-8 but numbers of tiles not physically shown
-    - [0] [1] [2]<br> [3] [4] [5]<br> [6] [7] [8]  
-- **PlayerX** or **PlayerO** starts
-    * Turn could be randomized upon initializing?
-- PlayerX / PlayerO pick a **tile**, **CLICKS** on it and then their symbol will appear in it.
-    * Example: 
-        * [X] [ ] [ ]<br> [ ] [ ] [ ]<br> [ ] [ ] [ ]
-    * *This would make **tile 0** no longer an option for the rest of the game. The next player will have to choose a different tile. **currentPlayer** now changes.*
-- Next Player clicks on a tile that isnt clicked on by previous player. In this case, PlayerX.
-    * Example:
-        * [X] [ ] [O]<br> [ ] [ ] [ ]<br> [ ] [ ] [ ]
-    * **tile 2** is no longer available to click again. **currentPlayer** changes.
-- The score so far:
-    * PlayerX - tile #0
-    * PlayerO - tile #2
-- As turns continue, somewhere around the 4th-5th turn, there should be a winner. (**checkWin()**)
-    * **IF** none of the winConditions were met,
-        - **alert()** 'Cat Game'
-### *Another possibility*
-- **IF** both Player turns are 5 or try to exceed 5,
-    * **alert()** 'Cat Game'
-    * Example: 
-        * [X] [X] [O]<br> [O] [X] [X]<br> [X] [O] [O]
-        * In the above example, **PlayerX** would be at turn **6** while **PlayerO** would be at turn **5**.
-
-
