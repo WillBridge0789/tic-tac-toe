@@ -17,7 +17,7 @@
  * Tiles - click events
  * Board as whole
  * Buttons (restart)
-
+# Tic-Tac-Toe
 
 ## Objectives
 * The game should let the players know who's turn it is.
@@ -82,6 +82,19 @@
 ## START
 - At init, the board should be displayed.
     - 9 tiles: numbered 0-8 but not physically shown
-- 
+    - [0] [1] [2]<br> [3] [4] [5]<br> [6] [7] [8]  
+- **PlayerX** or **PlayerO** starts
+    * Turn could be randomized upon initializing?
+- PlayerX / PlayerO pick a **tile**, **CLICKS** on it and then their symbol will appear in it.
+    * Example: 
+        * [X] [ ] [ ]<br> [ ] [ ] [ ]<br> [ ] [ ] [ ]
+    * *This would make **tile 0** no longer an option for the rest of the game. The next player will have to choose a different tile. **currentPlayer** now changes.*
+- Next Player clicks on a tile that isnt clicked on by previous player. In this case, PlayerX.
+    * Example:
+        * [X] [ ] [O]<br> [ ] [ ] [ ]<br> [ ] [ ] [ ]
+    * **tile 2** is no longer available to click again. **currentPlayer** changes.
+- The score so far:
+    * PlayerX - tile #0
+    * PlayerO - tile #2
 
 
