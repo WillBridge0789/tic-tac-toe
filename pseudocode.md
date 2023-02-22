@@ -81,7 +81,7 @@
 
 ## START
 - At init, the board should be displayed.
-    - 9 tiles: numbered 0-8 but not physically shown
+    - 9 tiles: numbered 0-8 but numbers of tiles not physically shown
     - [0] [1] [2]<br> [3] [4] [5]<br> [6] [7] [8]  
 - **PlayerX** or **PlayerO** starts
     * Turn could be randomized upon initializing?
@@ -96,5 +96,14 @@
 - The score so far:
     * PlayerX - tile #0
     * PlayerO - tile #2
+- As turns continue, somewhere around the 4th-5th turn, there should be a winner. (**checkWin()**)
+    * **IF** none of the winConditions were met,
+        - **alert()** 'Cat Game'
+### *Another possibility*
+- **IF** both Player turns are 5 or try to exceed 5,
+    * **alert()** 'Cat Game'
+    * Example: 
+        * [X] [X] [O]<br> [O] [X] [X]<br> [X] [O] [O]
+        * In the above example, **PlayerX** would be at turn **6** while **PlayerO** would be at turn **5**.
 
 
