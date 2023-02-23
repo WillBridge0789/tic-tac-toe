@@ -35,17 +35,30 @@
 
 ## Functions
 - init()
-- checkWin()
-    - checks state winConditions to see if either players 3 spots matched one of the indecises in the winConditions array. 
-    * **IF** playerX **OR** playerO === state.winConditions
-        * show winning player
-    * **ELSE** 
-        * show 'Cat Game!'
 - playerXO()
     - Passes in the parameters 'x' and 'o'
 	- Also passes a statement that switches between the 'x' and 'o' after clicking on 1 tile.
     - Start with 'X'. After tile is clicked,
-        - switch symbol to 'O' 
+    switch symbol to 'O'
+	- If currentPlayer == ‘X’
+		- currentPlayer = ‘O’
+	- Else
+		- currentPlayer = ‘X’
+- makeMove()
+	- Adds the current player to the tile clicked
+	- **checkWin()**
+	- **IF** win do **endGame()**
+	- **ELSE**
+		- Switches the Player in state
+- checkWin()
+    - checks state winConditions to see if either players 3 spots matched one of the indecises in the winConditions array. 
+    * **IF** playerX **OR** playerO equals state.winConditions
+        * show winning player
+    * **ELSE** 
+        * show 'Cat Game!'
+- endGame()
+	- Checks to see if turn count has reached 9
+	- After checking the turn count to see if it has reached 9, it then shows that it was a "tie".
 - resetGame()
     * Drawboard
     - Resets state to initial values
@@ -54,3 +67,16 @@
 - INIT
 	* Draw the board
 	* For each tile drawn, add a click listener to it
+
+- PLAYERXO
+	* Star with player X
+
+- MAKE-MOVE
+	* When playerXO clicks on a tile, it adds player to tile with their symbol
+
+- CHECK-WIN
+	* IF no winConditions were met, switch player 'X' to 'O' (**makeMove()**)
+	* update boardState
+
+- MAKE-MOVE
+	* Player chooses another tile, adds their symbol to the 	
