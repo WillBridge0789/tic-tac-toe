@@ -75,7 +75,7 @@
 	* When playerXO clicks on a tile, it adds player to tile with their symbol
 
 - CHECK-WIN
-	* IF no winConditions were met, switch player 'X' to 'O' (**makeMove()**)
+	* IF no winConditions were met, switch player 'X' to 'O': **playerXO()** => **makeMove()**
 	* update boardState
 
 - MAKE-MOVE
