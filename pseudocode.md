@@ -30,6 +30,9 @@
 * **button**: after clicking a space, (whether player x OR player o turn), will stop working after one click
 * **reset button**: clears or resets game board. 
 
+## Rendered Elements
+- 9 divs with class "tile" (tile, tile1, tile2 etc.)
+
 ## Functions
 - init()
 - checkWin()
@@ -39,12 +42,10 @@
     * **ELSE** 
         * show 'Cat Game!'
 - playerXO()
-    - Switches the symbols from X to O after every 1 click.
-    - **let** Symbols = 'X' and 'O'
+    - Passes in the parameters 'x' and 'o'
+	- Also passes a statement that switches between the 'x' and 'o' after clicking on 1 tile.
     - Start with 'X'. After tile is clicked,
         - switch symbol to 'O' 
-- makeMove()
-    * Adds the current player to the tile clicked
 - resetGame()
     * Drawboard
     - Resets state to initial values
@@ -53,5 +54,3 @@
 - INIT
 	* Draw the board
 	* For each tile drawn, add a click listener to it
-
-## START

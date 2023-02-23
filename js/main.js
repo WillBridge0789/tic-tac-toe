@@ -4,7 +4,7 @@
 
 //-------------------VARIABLES----------------------//
 
-const tiles = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+const tiles = ["", "", "", "", "", "", "", "", ""];
 
 //-------------------RENDERED HTML----------------------//
 
@@ -13,17 +13,25 @@ let gameBoard = document.createElement('div');
 gameBoard.setAttribute('class', 'container');
 main.appendChild(gameBoard);
 
+let row1 = document.createElement('div');
+row1.setAttribute('class', 'row');
+gameBoard.appendChild(row1);
+
+let col1 = document.createElement('div');
+col1.className = 'col-4 bg-light';
+row1.appendChild(col1);
+
 let tile = document.createElement('div');
 tile.setAttribute('class', 'tile0');
-gameBoard.appendChild(tile);
+col1.appendChild(tile);
 
 let tile1 = document.createElement('div');
 tile1.setAttribute('class', 'tile1');
-gameBoard.appendChild(tile1);
+row1.appendChild(tile1);
 
 let tile2 = document.createElement('div');
 tile2.setAttribute('class', 'tile2');
-gameBoard.appendChild(tile2);
+row1.appendChild(tile2);
 
 let tile3 = document.createElement('div');
 tile3.setAttribute('class', 'tile3');
