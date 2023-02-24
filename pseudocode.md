@@ -34,7 +34,6 @@
 - 9 divs with class "tile" (tile, tile1, tile2 etc.)
 
 ## Functions
-- init()
 - playerXO()
     - Passes in the parameters 'x' and 'o'
 	- Also passes a statement that switches between the 'x' and 'o' after clicking on 1 tile.
@@ -64,10 +63,6 @@
     - Resets state to initial values
 ## Procedures
 
-- INIT
-	* Draw the board
-	* For each tile drawn, add a click listener to it
-
 - PLAYERXO
 	* Star with player X
 
@@ -79,4 +74,43 @@
 	* update boardState
 
 - MAKE-MOVE
-	* Player chooses another tile, adds their symbol to the 	
+	* Player chooses another tile, adds their symbol to the board
+
+## HTML Layout
+### Table set-up
+
+<div class = "container">
+    <div class = "row">
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+        <div class = "col-4">
+            <div class = "tile"></div>
+        </div>
+    </div>
+</div>            
