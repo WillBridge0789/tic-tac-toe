@@ -128,7 +128,7 @@ main.appendChild(resetBtn);
 
 let gameState = {
     currentPlayer: 'X',
-    gameBoard: [0, 0, 0, 0, 0, 0, 0, 0],
+    gameBoard: [],
     turnCount: 0,
     gameStatus: true
 }
@@ -164,7 +164,7 @@ function makeMove() {
 }
 makeMove();
 
-function checkWin(currentPlayer) {
+function checkWin() {
     const winConditions = [
         [0 ,1, 2], 
         [3, 4, 5], 
@@ -175,20 +175,11 @@ function checkWin(currentPlayer) {
         [0, 4, 8],
         [2, 4, 6]
     ];
-    for (let i = 0; i < winConditions.length; i++){
-        let markCount = 0;
+    for (let i = 0; i < winConditions.length; i++) {
+        //let markCount = 0;
         for (let j = 0; j < winConditions[i].length; j++) {
-            markCount += gameState.gameBoard[winConditions[i][j]]
-            if (markCount == 3) {
-                console.log('X is the winner!');
-            }
-            else if (markCount == -3) {
-                console.log('O is the winner!');
-            } else {
-
-            }
-        }
-    }
+            gameState.turnCountCount += gameState.gameBoard[winConditions[i][j]];
+    } 
 }    
 console.log(checkWin);
 
