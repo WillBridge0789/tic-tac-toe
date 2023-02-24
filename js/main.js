@@ -6,7 +6,7 @@
 
 //const tiles = ["X", "", "", "", "", "", "", "", ""];
 
-const winConditions = [
+/* const winConditions = [
     [0 ,1, 2], 
     [3, 4, 5], 
     [6, 7, 8], 
@@ -15,7 +15,7 @@ const winConditions = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6]
-];
+];*/
 
 //-------------------RENDERED HTML----------------------//
 
@@ -117,6 +117,10 @@ let tile8 = document.createElement('div');
 tile8.setAttribute('class', 'tile');
 col9.appendChild(tile8);
 
+let resetBtn = document.createElement('button');
+resetBtn.innerText = 'Reset Game';
+main.appendChild(resetBtn);
+
 //-------------------OBJECTS----------------------//
 
 
@@ -124,7 +128,7 @@ col9.appendChild(tile8);
 
 let gameState = {
     currentPlayer: 'X',
-    gameBoard: [],
+    gameBoard: [0, 0, 0, 0, 0, 0, 0, 0],
     turnCount: 0,
     gameStatus: true
 }
@@ -148,7 +152,6 @@ function makeMove() {
     for (let i = 0; i < gameState.gameBoard.length; i++) {
         console.log(gameState.gameBoard);
         gameState.gameBoard[i].addEventListener('click',function() {
-            console.log('Hello');
             if (gameState.turnCount % 2 === 0) {
                 gameState.gameBoard[i].innerText = 'X';
             } else {
@@ -156,28 +159,47 @@ function makeMove() {
             }
             gameState.turnCount++; 
         })
+        //checkWin();
     }
 }
 makeMove();
 
-function checkWin(player) {
-    for (let i = 0; i < winConditions.length; i++) {
-        console.log(winConditions);
-        if (player )
-        
-        
+function checkWin(currentPlayer) {
+    const winConditions = [
+        [0 ,1, 2], 
+        [3, 4, 5], 
+        [6, 7, 8], 
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+    for (let i = 0; i < winConditions.length; i++){
+        let markCount = 0;
+        for (let j = 0; j < winConditions[i].length; j++) {
+            markCount += gameState.gameBoard[winConditions[i][j]]
+            if (markCount == 3) {
+                console.log('X is the winner!');
+            }
+            else if (markCount == -3) {
+                console.log('O is the winner!');
+            } else {
+
+            }
+        }
     }
-    gameState.gameStatus = false;
-}
+}    
+console.log(checkWin);
 
 function endGame() {
  
 }
 
 function resetGame() {
-    
+    /* resetBtn.removeEventListener('click', => {
+
+    }) */
 }
 
-//-------------------UNUSED----------------------//
-
-
+//-------------------UNUSED----------------------
