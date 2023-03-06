@@ -28,55 +28,55 @@ main.appendChild(gameBoard);
 
 let row1 = document.createElement('div');
 //row1.setAttribute('class', 'row');
-row1.className = 'row border border-primary game-column';
+row1.className = 'row game-column';
 gameBoard.appendChild(row1);
 
 let row2 = document.createElement('div');
 //row2.setAttribute('class', 'row');
-row2.className = 'row border border-primary game-column';
+row2.className = 'row game-column';
 gameBoard.appendChild(row2);
 
 let row3 = document.createElement('div');
 //row3.setAttribute('class', 'row');
-row3.className = 'row border border-primary game-column';
+row3.className = 'row game-column';
 gameBoard.appendChild(row3);
 
 //-------------------COLUMNS----------------------//
 
 let col1 = document.createElement('div');
-col1.className = 'col-md-4 border-start border-end border-primary border-primary';
+col1.className = 'col-md-4 border-start border-end';
 row1.appendChild(col1);
 
 let col2 = document.createElement('div');
-col2.className = 'col-md-4 border-start border-end border-primary border-primary';
+col2.className = 'col-md-4 border-start border-end';
 row1.appendChild(col2);
 
 let col3 = document.createElement('div');
-col3.className = 'col-md-4 border-start border-end border-primary';
+col3.className = 'col-md-4 border-start border-end';
 row1.appendChild(col3);
 
 let col4 = document.createElement('div');
-col4.className = 'col-md-4 border-start border-end border-primary';
+col4.className = 'col-md-4 border-start border-end';
 row2.appendChild(col4);
 
 let col5 = document.createElement('div');
-col5.className = 'col-md-4 border-start border-end border-primary';
+col5.className = 'col-md-4 border-start border-end';
 row2.appendChild(col5);
 
 let col6 = document.createElement('div');
-col6.className = 'col-md-4 border-start border-end border-primary';
+col6.className = 'col-md-4 border-start border-end';
 row2.appendChild(col6);
 
 let col7 = document.createElement('div');
-col7.className = 'col-md-4 border-start border-end border-primary';
+col7.className = 'col-md-4 border-start border-end';
 row3.appendChild(col7);
 
 let col8 = document.createElement('div');
-col8.className = 'col-md-4 border-start border-end border-primary';
+col8.className = 'col-md-4 border-start border-end';
 row3.appendChild(col8);
 
 let col9 = document.createElement('div');
-col9.className = 'col-md-4 border-start border-end border-primary';
+col9.className = 'col-md-4 border-start border-end';
 row3.appendChild(col9);
 
 //-------------------TILES----------------------//
@@ -130,55 +130,55 @@ resetBtn.addEventListener('click', function() {
 
     let row1 = document.createElement('div');
     //row1.setAttribute('class', 'row');
-    row1.className = 'row border border-primary game-column';
+    row1.className = 'row border  game-column';
     gameBoard.appendChild(row1);
 
     let row2 = document.createElement('div');
     //row2.setAttribute('class', 'row');
-    row2.className = 'row border border-primary game-column';
+    row2.className = 'row border  game-column';
     gameBoard.appendChild(row2);
 
     let row3 = document.createElement('div');
     //row3.setAttribute('class', 'row');
-    row3.className = 'row border border-primary game-column';
+    row3.className = 'row border  game-column';
     gameBoard.appendChild(row3);
 
     //-------------------COLUMNS----------------------//
 
     let col1 = document.createElement('div');
-    col1.className = 'col-md-4 border-start border-end border-primary border-primary';
+    col1.className = 'col-md-4 border-start border-end  ';
     row1.appendChild(col1);
 
     let col2 = document.createElement('div');
-    col2.className = 'col-md-4 border-start border-end border-primary border-primary';
+    col2.className = 'col-md-4 border-start border-end  ';
     row1.appendChild(col2);
 
     let col3 = document.createElement('div');
-    col3.className = 'col-md-4 border-start border-end border-primary';
+    col3.className = 'col-md-4 border-start border-end ';
     row1.appendChild(col3);
 
     let col4 = document.createElement('div');
-    col4.className = 'col-md-4 border-start border-end border-primary';
+    col4.className = 'col-md-4 border-start border-end ';
     row2.appendChild(col4);
 
     let col5 = document.createElement('div');
-    col5.className = 'col-md-4 border-start border-end border-primary';
+    col5.className = 'col-md-4 border-start border-end ';
     row2.appendChild(col5);
 
     let col6 = document.createElement('div');
-    col6.className = 'col-md-4 border-start border-end border-primary';
+    col6.className = 'col-md-4 border-start border-end ';
     row2.appendChild(col6);
 
     let col7 = document.createElement('div');
-    col7.className = 'col-md-4 border-start border-end border-primary';
+    col7.className = 'col-md-4 border-start border-end ';
     row3.appendChild(col7);
 
     let col8 = document.createElement('div');
-    col8.className = 'col-md-4 border-start border-end border-primary';
+    col8.className = 'col-md-4 border-start border-end ';
     row3.appendChild(col8);
 
     let col9 = document.createElement('div');
-    col9.className = 'col-md-4 border-start border-end border-primary';
+    col9.className = 'col-md-4 border-start border-end ';
     row3.appendChild(col9);
 
     //-------------------TILES----------------------//
